@@ -14,6 +14,8 @@ struct LoginView: View {
     
     @State var message = ""
     
+    @State private var successfullyLoggedIn = false
+    
     var body: some View {
         
         VStack {
@@ -37,20 +39,21 @@ struct LoginView: View {
             }
             .edgesIgnoringSafeArea(.all)
             
-            Spacer()
+            Spacer().layoutPriority(-1)
             
             if !message.isEmpty {
                 Text(message)
                     .foregroundColor(.red)
                     .padding()
-                    .font(.caption)
+                    .font(.body)
             }
 
+            //                .luminanceToAlpha()
             Spacer().layoutPriority(-1)
-            
             
             TextField("Email", text: $email)
                 .keyboardType(.emailAddress)
+                .textContentType(.emailAddress)
                 .padding(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
@@ -58,8 +61,8 @@ struct LoginView: View {
                 )
                 .padding(40)
             
-            
             SecureField("Password", text: $password)
+                .textContentType(.password)
                 .padding(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
@@ -67,17 +70,16 @@ struct LoginView: View {
                 )
                 .padding(.horizontal, 40)
             
-            
             Spacer()
             
             Button(action: {
+                successfullyLoggedIn = true
                 FirebaseManager.shared.signIn(email: email, password: password) { result in
                     switch result {
                     case .success(let result):
                         message.removeAll()
                         print(result)
                     case .failure(let error):
-                        print(error.localizedDescription)
                         message = error.localizedDescription
                     }
                 }
@@ -93,12 +95,19 @@ struct LoginView: View {
             .foregroundColor(.white)
             .padding()
             
+            
+            NavigationLink(destination: ContentView()) {
+                Text("Show Detail View")
+            }.navigationBarTitle("Navigation")
+            
             Spacer()
+            
             
         }
         .animation(.default)
-        
-        
+        .sheet(isPresented: $successfullyLoggedIn) {
+            Color.red
+        }
     }
 }
 
