@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1D50F524C24A01009DF92C /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D50F424C24A01009DF92C /* ProductList.swift */; };
+		5C1D50F624C24A01009DF92C /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D50F424C24A01009DF92C /* ProductList.swift */; };
+		5C1D50F824C24A1D009DF92C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D50F724C24A1D009DF92C /* Product.swift */; };
+		5C1D50F924C24A1D009DF92C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D50F724C24A1D009DF92C /* Product.swift */; };
 		5C2577F024BE2EF900F62FB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2577EF24BE2EF900F62FB5 /* User.swift */; };
 		5C2577F124BE2EF900F62FB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2577EF24BE2EF900F62FB5 /* User.swift */; };
 		5C28CC7924C1D1D4009C5910 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28CC7824C1D1D4009C5910 /* LoginView.swift */; };
@@ -50,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		0066DE89FB642ED94D0BDCAB /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1D50F424C24A01009DF92C /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		5C1D50F724C24A1D009DF92C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5C2577EF24BE2EF900F62FB5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5C28CC7824C1D1D4009C5910 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5C8B619824BE2918005868D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5C1D50FA24C24A45009DF92C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C2577EF24BE2EF900F62FB5 /* User.swift */,
+				5C1D50F424C24A01009DF92C /* ProductList.swift */,
+				5C1D50F724C24A1D009DF92C /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5CA1521A24BB854A00455363 = {
 			isa = PBXGroup;
 			children = (
@@ -140,14 +156,14 @@
 			isa = PBXGroup;
 			children = (
 				5C8B619824BE2918005868D7 /* GoogleService-Info.plist */,
-				5CA1522024BB854A00455363 /* Market_ListApp.swift */,
 				5CA1522124BB854A00455363 /* ContentView.swift */,
 				5C9A4D6B24BE246300AA7FC4 /* FirebaseManager.swift */,
-				5C28CC7824C1D1D4009C5910 /* LoginView.swift */,
-				5C2577EF24BE2EF900F62FB5 /* User.swift */,
-				5CA1526024BB88D300455363 /* ListPreviewView.swift */,
 				5CA1525D24BB86E000455363 /* List.swift */,
+				5CA1526024BB88D300455363 /* ListPreviewView.swift */,
+				5C28CC7824C1D1D4009C5910 /* LoginView.swift */,
+				5CA1522024BB854A00455363 /* Market_ListApp.swift */,
 				5CA1522224BB854B00455363 /* Assets.xcassets */,
+				5C1D50FA24C24A45009DF92C /* Model */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -434,6 +450,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA1524B24BB854B00455363 /* ContentView.swift in Sources */,
+				5C1D50F524C24A01009DF92C /* ProductList.swift in Sources */,
+				5C1D50F824C24A1D009DF92C /* Product.swift in Sources */,
 				5C28CC7924C1D1D4009C5910 /* LoginView.swift in Sources */,
 				5CA1526124BB88D300455363 /* ListPreviewView.swift in Sources */,
 				5C2577F024BE2EF900F62FB5 /* User.swift in Sources */,
@@ -448,6 +466,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA1524C24BB854B00455363 /* ContentView.swift in Sources */,
+				5C1D50F624C24A01009DF92C /* ProductList.swift in Sources */,
+				5C1D50F924C24A1D009DF92C /* Product.swift in Sources */,
 				5C28CC7A24C1D1D4009C5910 /* LoginView.swift in Sources */,
 				5CA1526224BB88D300455363 /* ListPreviewView.swift in Sources */,
 				5C2577F124BE2EF900F62FB5 /* User.swift in Sources */,
