@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var showingDetail = false
     
     
+    
     var body: some View {
         VStack(alignment: .leading) {
             

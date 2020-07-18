@@ -73,7 +73,7 @@ struct LoginView: View {
             Spacer()
             
             Button(action: {
-                successfullyLoggedIn = true
+//                successfullyLoggedIn = true
                 FirebaseManager.shared.signIn(email: email, password: password) { result in
                     switch result {
                     case .success(let result):
@@ -94,11 +94,6 @@ struct LoginView: View {
             .shadow(radius: 10, x: 10, y: 10)
             .foregroundColor(.white)
             .padding()
-            
-            
-            NavigationLink(destination: ContentView()) {
-                Text("Show Detail View")
-            }.navigationBarTitle("Navigation")
             
             Spacer()
             

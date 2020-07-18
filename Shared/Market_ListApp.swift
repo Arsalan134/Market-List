@@ -7,16 +7,20 @@
 
 import SwiftUI
 import Firebase
+import FirebaseCore
 
 @main
 struct Market_ListApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
+    let userState = UserState()
+    
     var body: some Scene {
         WindowGroup {
             
-            LoginView()
+            Authorization()
+                .environmentObject(userState)
                 .tabItem {
                     Image(systemName: "flame.fill")
                     Text("Login")
@@ -28,7 +32,13 @@ struct Market_ListApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        print("sasdkdkdkslk")
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        print("Salamlasm")
         
         FirebaseApp.configure()
         
