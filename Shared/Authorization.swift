@@ -6,19 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct Authorization: View {
     
     @EnvironmentObject var userState: UserState
     
     var body: some View {
-        
-        if userState.isLoggedIn {
-            ContentView()
-        } else {
-            LoginView()
+        Group {
+            if userState.isLoggedIn {
+                ContentView()
+            } else {
+                LoginView()
+            }
+        }.onAppear {
+            userState.isLoggedIn = Auth.auth().currentUser != nil
         }
-        
     }
 }
 

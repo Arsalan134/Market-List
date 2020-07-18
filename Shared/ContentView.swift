@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     
     @State var lists: [List] = [List(name: "Salam 1"), List(name: "Salam 2"), List(name: "Salam 3")]
     @State var showingDetail = false
     
-    
+    @EnvironmentObject var userState: UserState
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,7 +32,11 @@ struct ContentView: View {
                 Spacer()
                 
                 Button(action: {
-                    print("hello")
+                    do {
+                        try Auth.auth().signOut()
+                    } catch {
+                        print(error)
+                    }
                 }, label: {
                     Image(systemName: "magnifyingglass")
                 })

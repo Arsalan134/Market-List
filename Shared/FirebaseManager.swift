@@ -17,11 +17,16 @@ class FirebaseManager  {
         
     }
     
-    func createUser(with email: String, password: String) {
+    func createUser(withEmail email: String, password: String, completed: @escaping (Result<AuthDataResult, Error>) -> ()) {
         
-        Auth.auth().createUser(withEmail: "a", password: "as") { authResult, error in
-            
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                completed(.success(authResult!))
+            }
         }
+        
     }
     
     func signIn(email: String, password: String, completed: @escaping (Result<AuthDataResult, Error>) -> ()) {
