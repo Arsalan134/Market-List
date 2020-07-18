@@ -22,6 +22,8 @@ struct Authorization: View {
         }.onAppear {
             userState.isLoggedIn = Auth.auth().currentUser != nil
         }
+        .animation(.default)
+        
     }
 }
 

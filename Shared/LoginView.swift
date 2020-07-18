@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @State var email = "airavani2018@ada.edu.az"
+    @State var password = "123456"
     @State var message = ""
     
     @EnvironmentObject var userState: UserState
@@ -73,7 +73,7 @@ struct LoginView: View {
                 Spacer()
                 
                 Button(action: {
-                    //                successfullyLoggedIn = true
+                    
                     FirebaseManager.shared.signIn(email: email, password: password) { result in
                         switch result {
                         case .success(let result):

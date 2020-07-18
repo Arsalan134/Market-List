@@ -34,6 +34,7 @@ struct ContentView: View {
                 Button(action: {
                     do {
                         try Auth.auth().signOut()
+                        userState.isLoggedIn = false
                     } catch {
                         print(error)
                     }
@@ -50,11 +51,11 @@ struct ContentView: View {
                 .clipShape(Capsule())
                 .shadow(radius: 20, x: 10, y: 10)
             
-            Text("Hello, Arsalan.")
+            Text("Hello, \(Auth.auth().currentUser?.displayName ?? "").")
                 .font(.largeTitle)
             Text("Looks like you feel good.")
                 .font(.subheadline)
-            Text("You have 4 tasks to do today")
+            Text("You have \(lists.count) tasks to do today")
                 .font(.subheadline)
             
         }
@@ -63,7 +64,6 @@ struct ContentView: View {
         Spacer()
         
         Group {
-            
             ScrollView {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
@@ -84,9 +84,7 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-                
                 Spacer()
-                
             }
         }
     }
