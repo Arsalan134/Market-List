@@ -32,13 +32,7 @@ struct Market_ListApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-    func applicationDidFinishLaunching(_ application: UIApplication) {
-        print("sasdkdkdkslk")
-    }
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        print("Salamlasm")
         
         FirebaseApp.configure()
         

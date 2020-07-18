@@ -11,11 +11,8 @@ struct LoginView: View {
     
     @State var email = ""
     @State var password = ""
-    
     @State var message = ""
-    
-    @State private var successfullyLoggedIn = false
-    
+
     var body: some View {
         
         VStack {
@@ -96,13 +93,10 @@ struct LoginView: View {
             .padding()
             
             Spacer()
-            
+            Spacer()
             
         }
         .animation(.default)
-        .sheet(isPresented: $successfullyLoggedIn) {
-            Color.red
-        }
     }
 }
 
