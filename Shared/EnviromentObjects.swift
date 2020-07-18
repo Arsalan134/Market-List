@@ -9,5 +9,5 @@ import Foundation
 import FirebaseAuth
 
 class UserState: ObservableObject {
-    @Published var isLoggedIn = false
+    @Published var isLoggedIn = true
 }

@@ -15,14 +15,14 @@ struct Authorization: View {
     var body: some View {
         Group {
             if userState.isLoggedIn {
-                ContentView()
+                HomeView()
             } else {
                 LoginView()
             }
-        }.onAppear {
+        }
+        .onAppear {
             userState.isLoggedIn = Auth.auth().currentUser != nil
         }
-        .animation(.default)
         
     }
 }

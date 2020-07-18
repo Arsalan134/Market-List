@@ -23,12 +23,10 @@
 		5CA1524724BB854B00455363 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1524624BB854B00455363 /* Tests_macOS.swift */; };
 		5CA1524924BB854B00455363 /* Market_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1522024BB854A00455363 /* Market_ListApp.swift */; };
 		5CA1524A24BB854B00455363 /* Market_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1522024BB854A00455363 /* Market_ListApp.swift */; };
-		5CA1524B24BB854B00455363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1522124BB854A00455363 /* ContentView.swift */; };
-		5CA1524C24BB854B00455363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1522124BB854A00455363 /* ContentView.swift */; };
+		5CA1524B24BB854B00455363 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1522124BB854A00455363 /* HomeView.swift */; };
+		5CA1524C24BB854B00455363 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1522124BB854A00455363 /* HomeView.swift */; };
 		5CA1524D24BB854B00455363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA1522224BB854B00455363 /* Assets.xcassets */; };
 		5CA1524E24BB854B00455363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA1522224BB854B00455363 /* Assets.xcassets */; };
-		5CA1525E24BB86E000455363 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1525D24BB86E000455363 /* List.swift */; };
-		5CA1525F24BB86E000455363 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1525D24BB86E000455363 /* List.swift */; };
 		5CA1526124BB88D300455363 /* ListPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1526024BB88D300455363 /* ListPreviewView.swift */; };
 		5CA1526224BB88D300455363 /* ListPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1526024BB88D300455363 /* ListPreviewView.swift */; };
 		5CE3A34024C3246F008717BA /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3A33F24C3246F008717BA /* Authorization.swift */; };
@@ -36,8 +34,12 @@
 		5CE3A34324C32537008717BA /* EnviromentObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3A34224C32537008717BA /* EnviromentObjects.swift */; };
 		5CE3A34424C32537008717BA /* EnviromentObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3A34224C32537008717BA /* EnviromentObjects.swift */; };
 		734299928C48D1A60880919C /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0066DE89FB642ED94D0BDCAB /* Pods_iOS.framework */; };
-		991C6D2024C384C4003D1FF2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C6D1F24C384C4003D1FF2 /* SignInView.swift */; };
-		991C6D2124C384C4003D1FF2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C6D1F24C384C4003D1FF2 /* SignInView.swift */; };
+		991C6D2024C384C4003D1FF2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C6D1F24C384C4003D1FF2 /* SignUpView.swift */; };
+		991C6D2124C384C4003D1FF2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C6D1F24C384C4003D1FF2 /* SignUpView.swift */; };
+		9931373824C39DA600351170 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931373724C39DA600351170 /* List.swift */; };
+		9931373924C39DA600351170 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931373724C39DA600351170 /* List.swift */; };
+		99862A5924C3A868001A958E /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99862A5824C3A868001A958E /* GradientTextField.swift */; };
+		99862A5A24C3A868001A958E /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99862A5824C3A868001A958E /* GradientTextField.swift */; };
 		ED74AE753DE1E38609CB0E95 /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA22A0349D22FBA792AB5EE1 /* Pods_macOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +69,7 @@
 		5C8B619824BE2918005868D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C9A4D6B24BE246300AA7FC4 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		5CA1522024BB854A00455363 /* Market_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market_ListApp.swift; sourceTree = "<group>"; };
-		5CA1522124BB854A00455363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CA1522124BB854A00455363 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5CA1522224BB854B00455363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CA1522724BB854B00455363 /* Market List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Market List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA1522A24BB854B00455363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,13 +82,15 @@
 		5CA1524224BB854B00455363 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA1524624BB854B00455363 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5CA1524824BB854B00455363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CA1525D24BB86E000455363 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		5CA1526024BB88D300455363 /* ListPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPreviewView.swift; sourceTree = "<group>"; };
 		5CE3A33F24C3246F008717BA /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		5CE3A34224C32537008717BA /* EnviromentObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentObjects.swift; sourceTree = "<group>"; };
 		6965FAC33E44C7B38005D16F /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		758F788F467340AD42AA2783 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		991C6D1F24C384C4003D1FF2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		991C6D1F24C384C4003D1FF2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		9931373724C39DA600351170 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		99862A5824C3A868001A958E /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
+		99862A5B24C3ADAE001A958E /* Market List.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Market List.entitlements"; sourceTree = "<group>"; };
 		BF8F6E3B9270804ADAB426DD /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D9C1BD59CB8C9D31BFA7CEAF /* Pods-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.release.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		DA22A0349D22FBA792AB5EE1 /* Pods_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +144,7 @@
 		5C1D50FA24C24A45009DF92C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9931373724C39DA600351170 /* List.swift */,
 				5C2577EF24BE2EF900F62FB5 /* User.swift */,
 				5C1D50F424C24A01009DF92C /* ProductList.swift */,
 				5C1D50F724C24A1D009DF92C /* Product.swift */,
@@ -166,14 +171,14 @@
 			children = (
 				5C8B619824BE2918005868D7 /* GoogleService-Info.plist */,
 				5CE3A33F24C3246F008717BA /* Authorization.swift */,
-				5CA1522124BB854A00455363 /* ContentView.swift */,
 				5CE3A34224C32537008717BA /* EnviromentObjects.swift */,
 				5C9A4D6B24BE246300AA7FC4 /* FirebaseManager.swift */,
-				5CA1525D24BB86E000455363 /* List.swift */,
+				99862A5824C3A868001A958E /* GradientTextField.swift */,
+				5CA1522124BB854A00455363 /* HomeView.swift */,
 				5CA1526024BB88D300455363 /* ListPreviewView.swift */,
 				5C28CC7824C1D1D4009C5910 /* LoginView.swift */,
-				991C6D1F24C384C4003D1FF2 /* SignInView.swift */,
 				5CA1522024BB854A00455363 /* Market_ListApp.swift */,
+				991C6D1F24C384C4003D1FF2 /* SignUpView.swift */,
 				5CA1522224BB854B00455363 /* Assets.xcassets */,
 				5C1D50FA24C24A45009DF92C /* Model */,
 			);
@@ -194,6 +199,7 @@
 		5CA1522924BB854B00455363 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				99862A5B24C3ADAE001A958E /* Market List.entitlements */,
 				5CA1522A24BB854B00455363 /* Info.plist */,
 			);
 			path = iOS;
@@ -462,16 +468,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA1524B24BB854B00455363 /* ContentView.swift in Sources */,
+				5CA1524B24BB854B00455363 /* HomeView.swift in Sources */,
 				5C1D50F524C24A01009DF92C /* ProductList.swift in Sources */,
 				5C1D50F824C24A1D009DF92C /* Product.swift in Sources */,
 				5C28CC7924C1D1D4009C5910 /* LoginView.swift in Sources */,
+				9931373824C39DA600351170 /* List.swift in Sources */,
 				5CA1526124BB88D300455363 /* ListPreviewView.swift in Sources */,
+				99862A5924C3A868001A958E /* GradientTextField.swift in Sources */,
 				5C2577F024BE2EF900F62FB5 /* User.swift in Sources */,
-				991C6D2024C384C4003D1FF2 /* SignInView.swift in Sources */,
+				991C6D2024C384C4003D1FF2 /* SignUpView.swift in Sources */,
 				5C9A4D6C24BE246300AA7FC4 /* FirebaseManager.swift in Sources */,
 				5CA1524924BB854B00455363 /* Market_ListApp.swift in Sources */,
-				5CA1525E24BB86E000455363 /* List.swift in Sources */,
 				5CE3A34324C32537008717BA /* EnviromentObjects.swift in Sources */,
 				5CE3A34024C3246F008717BA /* Authorization.swift in Sources */,
 			);
@@ -481,16 +488,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA1524C24BB854B00455363 /* ContentView.swift in Sources */,
+				5CA1524C24BB854B00455363 /* HomeView.swift in Sources */,
 				5C1D50F624C24A01009DF92C /* ProductList.swift in Sources */,
 				5C1D50F924C24A1D009DF92C /* Product.swift in Sources */,
 				5C28CC7A24C1D1D4009C5910 /* LoginView.swift in Sources */,
+				9931373924C39DA600351170 /* List.swift in Sources */,
 				5CA1526224BB88D300455363 /* ListPreviewView.swift in Sources */,
+				99862A5A24C3A868001A958E /* GradientTextField.swift in Sources */,
 				5C2577F124BE2EF900F62FB5 /* User.swift in Sources */,
-				991C6D2124C384C4003D1FF2 /* SignInView.swift in Sources */,
+				991C6D2124C384C4003D1FF2 /* SignUpView.swift in Sources */,
 				5C9A4D6D24BE246300AA7FC4 /* FirebaseManager.swift in Sources */,
 				5CA1524A24BB854B00455363 /* Market_ListApp.swift in Sources */,
-				5CA1525F24BB86E000455363 /* List.swift in Sources */,
 				5CE3A34424C32537008717BA /* EnviromentObjects.swift in Sources */,
 				5CE3A34124C3246F008717BA /* Authorization.swift in Sources */,
 			);
@@ -651,6 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS/Market List.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7CN72P9F4;
 				ENABLE_PREVIEWS = YES;
@@ -663,6 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Arsalan.Market-List";
 				PRODUCT_NAME = "Market List";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -674,6 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS/Market List.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7CN72P9F4;
 				ENABLE_PREVIEWS = YES;
@@ -686,6 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Arsalan.Market-List";
 				PRODUCT_NAME = "Market List";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

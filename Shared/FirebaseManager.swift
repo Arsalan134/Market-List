@@ -17,27 +17,27 @@ class FirebaseManager  {
         
     }
     
-    func createUser(withEmail email: String, password: String, completed: @escaping (Result<AuthDataResult, Error>) -> ()) {
+    func createUser(withName name: String, email: String, password: String, completed: @escaping (Result<AuthDataResult, Error>) -> ()) {
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 completed(.failure(error))
             } else {
+                self.updateUserProfile(displayName: name)
                 completed(.success(authResult!))
             }
         }
+        
         
     }
     
     func signIn(email: String, password: String, completed: @escaping (Result<AuthDataResult, Error>) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            
-            if let error = error {
-                completed(.failure(error))
+            if error != nil {
+                completed(.failure(error!))
             } else {
                 completed(.success(authResult!))
             }
-            
         }
     }
     
@@ -53,7 +53,7 @@ class FirebaseManager  {
     
     func getUserDetails(completion: @escaping (User) -> ()) {
         Auth.auth().addStateDidChangeListener { (auth, user) in
-            
+            //FIXME: add user
             completion(User())
         }
     }
@@ -78,9 +78,14 @@ class FirebaseManager  {
     }
     
     
-    func updateUserProfile(displayName: String) {
+    func updateUserProfile(displayName: String, photoURL: String = "") {
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.displayName = displayName
+        
+        if let url = URL(string: photoURL) {
+            changeRequest?.photoURL = url
+        }
+        
         changeRequest?.commitChanges { (error) in
             
         }
