@@ -12,6 +12,7 @@ struct HomeView: View {
     
     @State var lists: [List] = [List(name: "Salam 1"), List(name: "Salam 2"), List(name: "Salam 3")]
     @State var showingDetail = false
+    @State var profileImage: Image?
     
     @EnvironmentObject var userState: UserState
     
@@ -41,11 +42,12 @@ struct HomeView: View {
                 }, label: {
                     Image(systemName: "magnifyingglass")
                 })
-            }.accentColor(.primary)
+            }
+            .accentColor(.primary)
             
             Spacer()
             
-            Image("Arsalan")
+            profileImage?
                 .resizable()
                 .frame(width: 70, height: 70)
                 .clipShape(Capsule())
@@ -58,12 +60,11 @@ struct HomeView: View {
             Text("You have \(lists.count) tasks to do today")
                 .font(.subheadline)
             
-        }
-        .padding()
-        
-        Spacer()
-        
-        Group {
+            //        }
+            //        .padding()
+            
+            Spacer()
+            
             ScrollView {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
@@ -84,7 +85,18 @@ struct HomeView: View {
                     }
                     .padding()
                 }
-                Spacer()
+            }
+            
+            Spacer()
+        }
+        .onAppear {
+            FirebaseManager.shared.downloadImage(path: Auth.auth().currentUser?.photoURL?.absoluteString) { result in
+                switch result {
+                case .success(let image):
+                    profileImage = Image(uiImage: image)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }

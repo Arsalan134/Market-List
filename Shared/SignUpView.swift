@@ -10,12 +10,17 @@ import SwiftUI
 struct SignUpView: View {
     
     @State var name = ""
+    @State var surname = ""
     @State var dateOfBirth = Date()
     @State var email = ""
     @State var password = ""
     @State var gender = 0
     
     @State var message = ""
+    
+    @State private var showingImagePicker = false
+    @State private var image = Image(systemName: "person.crop.circle.fill")
+    @State private var inputImage: UIImage?
     
     @EnvironmentObject var userState: UserState
     
@@ -31,7 +36,6 @@ struct SignUpView: View {
             VStack {
                 
                 Spacer()
-                Spacer()
                 
                 if !message.isEmpty {
                     Text(message)
@@ -40,12 +44,31 @@ struct SignUpView: View {
                         .font(.body)
                 }
                 
+                Spacer()
+                
                 Group {
+                    
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: 80, maxHeight: 80)
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            showingImagePicker = true
+                        }
+                    
+                    Spacer()
+                    
                     GradientTextField(placeholder: "Name", value: $name)
+                        .textContentType(.name)
+                    
+                    GradientTextField(placeholder: "Surname", value: $surname)
+                        .textContentType(.familyName)
                     
                     GradientTextField(placeholder: "Email", value: $email)
                         .keyboardType(.emailAddress)
                         .textContentType(.emailAddress)
+                        .autocapitalization(.none)
                     
                     GradientTextField(placeholder: "Password", isSecured: true, value: $password)
                         .textContentType(.password)
@@ -54,7 +77,7 @@ struct SignUpView: View {
                 Spacer()
                 
                 Button(action: {
-                    FirebaseManager.shared.createUser(withName: name, email: email, password: password) { result in
+                    FirebaseManager.shared.createUser(withName: name, surname: surname, email: email, password: password, image: inputImage) { result in
                         switch result {
                         case .success(_):
                             userState.isLoggedIn = true
@@ -97,6 +120,14 @@ struct SignUpView: View {
             }
         }
         .animation(.default)
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: $inputImage)
+        }
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
 }
 

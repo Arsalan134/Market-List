@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GradientTextField: View {
     
-    @State var placeholder = ""
-    @State var isSecured = false
+    var placeholder = ""
+    var isSecured = false
     
     @Binding var value: String
     

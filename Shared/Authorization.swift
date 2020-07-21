@@ -21,7 +21,7 @@ struct Authorization: View {
             }
         }
         .onAppear {
-            userState.isLoggedIn = Auth.auth().currentUser != nil
+            userState.isLoggedIn = FirebaseManager.shared.isUserSignedIn()
         }
         
     }
