@@ -1,7 +1,7 @@
 # Market-List
 iOS Application for tracking purchases in a market
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://problemvar-test.s3.eu-central-1.amazonaws.com/logo)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
