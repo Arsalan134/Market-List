@@ -98,22 +98,22 @@ struct SignUpView: View {
                 .foregroundColor(.white)
                 .padding()
                 
-                SignInWithAppleButton(
-                    onRequest: { request in
-                        print(request)
-                    },
-                    onCompletion: { result in
-                        switch result {
-                        case .success(let authorization):
-                            print(authorization)
-                        case .failure(let error):
-                            print(error.localizedDescription)
-                        }
-                    }
-                )
-                .frame(minWidth: 140, maxWidth: 300, minHeight: 30, idealHeight: 44, maxHeight: 50, alignment: .center)
-                .clipShape(Capsule())
-                .padding()
+//                SignInWithAppleButton(
+//                    onRequest: { request in
+//                        print(request)
+//                    },
+//                    onCompletion: { result in
+//                        switch result {
+//                        case .success(let authorization):
+//                            print(authorization)
+//                        case .failure(let error):
+//                            print(error.localizedDescription)
+//                        }
+//                    }
+//                )
+//                .frame(minWidth: 140, maxWidth: 300, minHeight: 30, idealHeight: 44, maxHeight: 50, alignment: .center)
+//                .clipShape(Capsule())
+//                .padding()
                 
                 Spacer()
                 

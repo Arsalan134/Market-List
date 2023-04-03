@@ -193,9 +193,9 @@ class FirebaseManager  {
             // The user's ID, unique to the Firebase project.
             // Do NOT use this value to authenticate with your backend server,
             // if you have one. Use getTokenWithCompletion:completion: instead.
-            let uid = user.uid
-            let email = user.email
-            let photoURL = user.photoURL
+//            let uid = user.uid
+//            let email = user.email
+//            let photoURL = user.photoURL
             var multiFactorString = "MultiFactor: "
             for info in user.multiFactor.enrolledFactors {
                 multiFactorString += info.displayName ?? "[DispayName]"
@@ -254,7 +254,7 @@ class FirebaseManager  {
         //FIXME: Prompt the user to re-provide their sign-in credentials
         
         user?.reauthenticate(with: credential) { result, error in
-            if let error = error {
+            if error != nil {
                 // An error happened.
             } else {
                 // User re-authenticated.
