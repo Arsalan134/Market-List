@@ -374,11 +374,12 @@ static void callInMainThreadWithAuthDataResultAndError(
     _phoneNumber = phoneNumber;
     _metadata = metadata ?: [[FIRUserMetadata alloc] initWithCreationDate:nil lastSignInDate:nil];
     _tenantID = tenantID;
-    // The `heartbeatLogger` will be set later via a property update.
+    // The `heartbeatLogger` and `appCheck` will be set later via a property update.
     _requestConfiguration = [[FIRAuthRequestConfiguration alloc] initWithAPIKey:APIKey
                                                                           appID:appID
                                                                            auth:_auth
-                                                                heartbeatLogger:nil];
+                                                                heartbeatLogger:nil
+                                                                       appCheck:nil];
 #if TARGET_OS_IOS
     _multiFactor = multiFactor ?: [[FIRMultiFactor alloc] init];
     _multiFactor.user = self;
@@ -849,7 +850,7 @@ static void callInMainThreadWithAuthDataResultAndError(
 - (void)reauthenticateWithProvider:(id<FIRFederatedAuthProvider>)provider
                         UIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
                         completion:(nullable FIRAuthDataResultCallback)completion {
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
   dispatch_async(FIRAuthGlobalWorkQueue(), ^{
     [provider getCredentialWithUIDelegate:UIDelegate
                                completion:^(FIRAuthCredential *_Nullable credential,
@@ -862,7 +863,7 @@ static void callInMainThreadWithAuthDataResultAndError(
                                                          completion:completion];
                                }];
   });
-#endif  // TARGET_OS_IOS
+#endif  // TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
 }
 
 - (nullable NSString *)refreshToken {
@@ -1338,7 +1339,7 @@ static void callInMainThreadWithAuthDataResultAndError(
 - (void)linkWithProvider:(id<FIRFederatedAuthProvider>)provider
               UIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
               completion:(nullable FIRAuthDataResultCallback)completion {
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
   dispatch_async(FIRAuthGlobalWorkQueue(), ^{
     [provider getCredentialWithUIDelegate:UIDelegate
                                completion:^(FIRAuthCredential *_Nullable credential,
@@ -1350,7 +1351,7 @@ static void callInMainThreadWithAuthDataResultAndError(
                                  [self linkWithCredential:credential completion:completion];
                                }];
   });
-#endif  // TARGET_OS_IOS
+#endif  // TARGET_OS_IOS && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
 }
 
 - (void)unlinkFromProvider:(NSString *)provider

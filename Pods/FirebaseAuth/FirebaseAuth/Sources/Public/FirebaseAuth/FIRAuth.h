@@ -850,6 +850,26 @@ NS_SWIFT_NAME(Auth)
  */
 - (BOOL)canHandleNotification:(NSDictionary *)userInfo API_UNAVAILABLE(macos, tvos, watchos);
 
+/** @fn revokeTokenWithAuthorizationCode:Completion
+    @brief Revoke the users token with authorization code.
+    @param completion (Optional) the block invoked when the request to revoke the token is
+        complete, or fails. Invoked asynchronously on the main thread in the future.
+ */
+- (void)revokeTokenWithAuthorizationCode:(NSString *)authorizationCode
+                              completion:(nullable void (^)(NSError *_Nullable error))completion;
+
+#if TARGET_OS_IOS && !TARGET_OS_MACCATALYST && (!defined(TARGET_OS_VISION) || !TARGET_OS_VISION)
+/** @fn initializeRecaptchaConfigWithCompletion:completion:
+    @brief Initializes reCAPTCHA using the settings configured for the project or
+    tenant.
+
+    If you change the tenant ID of the `Auth` instance, the configuration will be
+    reloaded.
+ */
+- (void)initializeRecaptchaConfigWithCompletion:
+    (nullable void (^)(NSError *_Nullable error))completion;
+#endif
+
 #pragma mark - User sharing
 
 /** @fn useUserAccessGroup:error:
