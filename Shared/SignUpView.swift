@@ -119,7 +119,7 @@ struct SignUpView: View {
                 
             }
         }
-        .animation(.default)
+//        .animation(.default)
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: $inputImage)
         }
